@@ -1,0 +1,222 @@
+.watch-hero {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 24px 0;
+  padding: 22px 24px;
+  border-radius: 22px;
+  background: linear-gradient(120deg, #173f35, #286f5b);
+  color: #fff;
+  box-shadow: 0 16px 38px #173f3530;
+}
+.watch-hero > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 170px;
+}
+.watch-hero svg {
+  width: 25px;
+  height: 25px;
+  color: #f4bd8b;
+}
+.watch-hero span {
+  display: flex;
+  flex-direction: column;
+}
+.watch-hero small {
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+}
+.watch-hero strong {
+  font-size: 1.6rem;
+}
+.watch-hero button {
+  margin-left: auto;
+}
+.watch-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.watch-card {
+  padding: 22px;
+  border: 1px solid #e2e8e3;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 10px 30px #1b423617;
+}
+.watch-card.reached {
+  border-color: #78b99d;
+  background: linear-gradient(150deg, #fff, #f1fbf6);
+}
+.watch-card header,
+.watch-card footer,
+.watch-prices {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.watch-card header > span {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  color: #94704f;
+}
+.watch-card header em {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 99px;
+  background: #edf3ef;
+  padding: 5px 9px;
+  color: #557066;
+  font-size: 0.67rem;
+  font-style: normal;
+  font-weight: 800;
+}
+.watch-card header svg {
+  width: 14px;
+}
+.watch-card h2 {
+  margin: 18px 0 3px;
+  font-family: Georgia, serif;
+  color: #183e34;
+}
+.watch-card > p {
+  margin: 0;
+  color: #7c8882;
+}
+.watch-prices {
+  margin: 20px 0;
+}
+.watch-prices span {
+  display: flex;
+  flex-direction: column;
+}
+.watch-prices small {
+  font-size: 0.63rem;
+  font-weight: 800;
+  color: #8a9690;
+}
+.watch-prices b {
+  margin-top: 3px;
+  color: #29483d;
+}
+.watch-track {
+  height: 8px;
+  border-radius: 99px;
+  background: #e5ece8;
+  overflow: hidden;
+}
+.watch-track i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #d9955c, #3b8d70);
+}
+.watch-card footer {
+  margin-top: 18px;
+  border-top: 1px solid #eef1ef;
+  padding-top: 14px;
+}
+.watch-card footer button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 0;
+  background: transparent;
+  color: #376c5b;
+  font-weight: 700;
+  cursor: pointer;
+}
+.watch-card footer svg {
+  width: 16px;
+}
+.watch-card footer .remove {
+  color: #b84e42;
+}
+.watch-empty {
+  display: flex;
+  min-height: 320px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  border: 1px dashed #c9d7cf;
+  border-radius: 22px;
+  background: #f8faf8;
+  color: #62776d;
+}
+.watch-empty > svg {
+  width: 42px;
+  height: 42px;
+  color: #4e8b75;
+}
+.watch-empty h2 {
+  margin: 13px 0 2px;
+  color: #24483b;
+}
+.watch-empty p {
+  max-width: 500px;
+}
+.watch-modal,
+.observe-modal {
+  position: relative;
+}
+.watch-modal > svg,
+.observe-modal > svg {
+  width: 32px;
+  height: 32px;
+  color: #348067;
+}
+.watch-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.modal-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  border: 0;
+  background: #eef3ef;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+}
+.modal-close svg {
+  width: 17px;
+}
+.observe-modal > button.primary {
+  width: 100%;
+  margin-top: 18px;
+}
+@media (max-width: 800px) {
+  .watch-grid {
+    grid-template-columns: 1fr;
+  }
+  .watch-hero {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .watch-hero button {
+    margin-left: 0;
+  }
+  .watch-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 520px) {
+  .watch-prices {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .watch-card footer {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+}

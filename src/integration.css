@@ -1,0 +1,12 @@
+.shell nav {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+.forgot-link {
+  display: block;
+  margin: -8px 0 13px;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 700;
+}
