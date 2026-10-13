@@ -1,6 +1,13 @@
 import axios from "axios";
+
+const productionApiUrl = "https://anti-impulse-backend.onrender.com/api";
+const apiBaseUrl =
+  process.env.NODE_ENV === "production"
+    ? productionApiUrl
+    : process.env.REACT_APP_API_URL || "http://localhost:8080/api";
+
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || "http://localhost:8080/api",
+  baseURL: apiBaseUrl,
 });
 api.interceptors.request.use((config) => {
   const token = sessionStorage.getItem("token");
