@@ -26,8 +26,14 @@ api.interceptors.response.use(
     return Promise.reject(error);
   },
 );
-export const message = (error) =>
-  error.response?.data?.message ||
-  error.response?.data ||
-  "Unable to complete the request";
+export const message = (error) => {
+  if (!error.response) {
+    return "Cannot reach the server. Refresh the page and try again.";
+  }
+  return (
+    error.response.data?.message ||
+    error.response.data ||
+    "Unable to complete the request"
+  );
+};
 export default api;
